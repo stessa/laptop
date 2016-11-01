@@ -18,7 +18,8 @@ Requirements
 
 I support clean installations of these operating systems:
 
-* [OS X El Capitan (10.11)](https://www.apple.com/osx/)
+* [OS X Sierra (10.12)](https://www.apple.com/osx/)
+* OS X El Capitan (10.11)
 * OS X Yosemite (10.10)
 * OS X Mavericks (10.9)
 
@@ -39,9 +40,8 @@ time, then press `return` after each one. The first two commands download the
 files the script needs to run, and the third command executes the script.
 
 ```sh
-curl --remote-name https://raw.githubusercontent.com/monfresh/laptop/master/mac
-curl --remote-name https://raw.githubusercontent.com/monfresh/laptop/master/Brewfile
-bash mac 2>&1 | tee ~/laptop.log && source ~/.rvm/scripts/rvm
+curl --remote-name https://raw.githubusercontent.com/stessa/laptop/master/Brewfile
+curl https://raw.githubusercontent.com/stessa/laptop/master/mac | bash 
 ```
 
 The [script](https://github.com/monfresh/laptop/blob/master/mac) itself is
@@ -83,7 +83,8 @@ What it sets up
 * [hub] for interacting with the GitHub API
 * [PhantomJS] for headless website testing
 * [Postgres] for storing relational data
-* [RVM] for managing Ruby versions (includes the latest [Ruby])
+* [RBENV] for managing Ruby versions (includes the latest [Ruby])
+* [NPM] Node Package Manager
 * [Sublime Text 3] for coding all the things
 * [Zsh] as your shell
 
@@ -98,7 +99,8 @@ What it sets up
 [PhantomJS]: http://phantomjs.org/
 [Postgres]: http://www.postgresql.org/
 [Ruby]: https://www.ruby-lang.org/en/
-[RVM]: https://github.com/wayneeseguin/rvm
+[RBENV]: https://github.com/rbenv/rbenv
+[NPM]: https://www.npmjs.com/
 [Sublime Text 3]: http://www.sublimetext.com/3
 [Zsh]: http://www.zsh.org/
 

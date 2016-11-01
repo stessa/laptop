@@ -10,6 +10,11 @@ brew 'postgresql'
 
 brew 'phantomjs'
 
+brew 'rbenv'
+brew 'rbenv-bundler'
+
+brew 'npm'
+
 brew 'hub'
 
 tap 'caskroom/cask'
