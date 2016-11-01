@@ -85,6 +85,7 @@ What it sets up
 * [Postgres] for storing relational data
 * [RBENV] for managing Ruby versions (includes the latest [Ruby])
 * [NPM] Node Package Manager
+* [NVM] Node Version Manager
 * [Sublime Text 3] for coding all the things
 * [Zsh] as your shell
 
@@ -101,6 +102,7 @@ What it sets up
 [Ruby]: https://www.ruby-lang.org/en/
 [RBENV]: https://github.com/rbenv/rbenv
 [NPM]: https://www.npmjs.com/
+[NVM]: http://nvm.sh
 [Sublime Text 3]: http://www.sublimetext.com/3
 [Zsh]: http://www.zsh.org/
 

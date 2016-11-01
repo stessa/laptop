@@ -14,6 +14,7 @@ brew 'rbenv'
 brew 'rbenv-bundler'
 
 brew 'npm'
+brew 'nvm'
 
 brew 'hub'
 
