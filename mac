@@ -55,6 +55,14 @@ if [ ! -d "$HOME/.bin/" ]; then
   mkdir "$HOME/.bin"
 fi
 
+if [ ! -f "$HOME/.zshrc" ]; then
+  touch "$HOME/.zshrc"
+fi
+
+# shellcheck disable=SC2016
+append_to_file "$HOME/.zshrc" 'export PATH="$HOME/.bin:$HOME/.rbenv/shims:$PATH"'
+append_to_file "$HOME/.zshrc" 'source $(brew --prefix nvm)/nvm.sh'
+
 case "$SHELL" in
   */zsh) :
     create_zshrc_and_set_it_as_shell_file
@@ -181,6 +189,7 @@ append_to_file "$shell_file" 'eval "$(hub alias -s)"'
 
 append_to_file "$HOME/.gemrc" 'gem: --no-document'
 
+
 if command -v rbenv >/dev/null || command -v rvm >/dev/null; then
   fancy_echo 'We recommend chruby and ruby-install over RVM or rbenv'
 else
@@ -245,6 +254,16 @@ if [ -z "$CI" ] && no_zsh_frameworks && no_prompt_customizations_in_shell_file; 
   if [ "$response" = "y" ]; then
     if ! grep -qs "prompt_ruby_info()" "$shell_file"; then
       cat <<EOT >> "$shell_file"
+
+if [ -f "$HOME/.laptop.local" ]; then
+  . "$HOME/.laptop.local"
+fi
+
+# display pwd in orange, current ruby version or gemset in green,
+# and set prompt character to $
+# shellcheck disable=SC2016
+append_to_file "$HOME/.zshrc" 'precmd () { PS1="%{%F{166}%}[%~] %{%F{65}%}$ " }'
+
 
   prompt_ruby_info() {
     if [ -f ".ruby-version" ]; then

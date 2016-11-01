@@ -39,7 +39,8 @@ and once it appears, press `return` to launch it.
 In your Terminal window, copy and paste the command below, then press `return`.
 
 ```sh
-bash <(curl -s https://raw.githubusercontent.com/monfresh/laptop/master/laptop)
+curl --remote-name https://raw.githubusercontent.com/stessa/laptop/master/Brewfile
+curl https://raw.githubusercontent.com/stessa/laptop/master/mac | bash 
 ```
 
 The [script](https://github.com/monfresh/laptop/blob/master/mac) itself is
@@ -86,7 +87,9 @@ What it sets up
 * [hub] for interacting with the GitHub API
 * [PhantomJS] for headless website testing
 * [Postgres] for storing relational data
-* [ruby-install] for installing different versions of Ruby
+* [RBENV] for managing Ruby versions (includes the latest [Ruby])
+* [NPM] Node Package Manager
+* [NVM] Node Version Manager
 * [Sublime Text 3] for coding all the things
 * [Zsh] as your shell (if you opt in)
 
@@ -102,7 +105,9 @@ What it sets up
 [PhantomJS]: http://phantomjs.org/
 [Postgres]: http://www.postgresql.org/
 [Ruby]: https://www.ruby-lang.org/en/
-[ruby-install]: https://github.com/postmodern/ruby-install
+[RBENV]: https://github.com/rbenv/rbenv
+[NPM]: https://www.npmjs.com/
+[NVM]: http://nvm.sh
 [Sublime Text 3]: http://www.sublimetext.com/3
 [Zsh]: http://www.zsh.org/
 
