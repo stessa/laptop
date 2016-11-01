@@ -42,7 +42,7 @@ if [ ! -f "$HOME/.zshrc" ]; then
 fi
 
 # shellcheck disable=SC2016
-append_to_file "$HOME/.zshrc" 'export PATH="$HOME/.bin:$PATH"'
+append_to_file "$HOME/.zshrc" 'export PATH="$HOME/.bin:$HOME/.rbenv/shims:$PATH"'
 append_to_file "$HOME/.zshrc" 'source $(brew --prefix nvm)/nvm.sh'
 
 case "$SHELL" in
